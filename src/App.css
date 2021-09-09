@@ -1,33 +1,38 @@
-import React, { useState } from "react";
-import useNamesControl from "./useNamesControl";
-
-function App() {
-
-  const [input, setInput] = useState("");
-  const [names, deleteName] = useNamesControl(["Huyen", "Hoa", "Hung", "Long"]);
-
-  const handleClick = () => {
-    deleteName(input);
-  };
-
-  return (
-    <div style={{ margin: 20 }}>
-      <div>学生一覧: [Huyen,Hoa,Hung,Long]</div>
-      <div>
-        Nhap ten o day：{" "}
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-      </div>
-      <div>
-        <button onClick={handleClick}>Xoa</button>
-      </div>
-      <div>Ten nguoi can xoa: {input}</div>
-      <div>{JSON.stringify(names)}</div>
-    </div>
-  );
+.App {
+  margin-left: 15px;
 }
 
-export default App;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
