@@ -26,7 +26,7 @@ function App() {
         <button onClick={handleClick}>Xoa</button>
       </div>
       <div>削除する名前 : {input}</div>
-      <div>{JSON.stringify(names)}</div>
+      <div>新しい一覧 : {JSON.stringify(names)}</div>
     </div>
   );
 }
