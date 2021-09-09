@@ -13,8 +13,9 @@ function App() {
   return (
     <div style={{ margin: 20 }}>
       <div>学生一覧: [Huyen,Hoa,Hung,Long]</div>
+      <div>削除する名前を入力してください。</div>
       <div>
-        Nhap ten o day：{" "}
+        {" "}
         <input
           type="text"
           value={input}
@@ -24,7 +25,7 @@ function App() {
       <div>
         <button onClick={handleClick}>Xoa</button>
       </div>
-      <div>Ten nguoi can xoa: {input}</div>
+      <div>削除する名前 : {input}</div>
       <div>{JSON.stringify(names)}</div>
     </div>
   );
